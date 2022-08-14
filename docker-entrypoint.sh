@@ -83,7 +83,12 @@ EOF
         echo >&2 'error: missing DB_HOST environment variable'
         exit 1
     fi
+else
+  export $(cat .env | grep ^DB_ | sed 's/#.*//g' | xargs)
 fi
+
+IFS=":" read -r DB_HOST_NAME DB_PORT <<< "$DB_HOST"
+DB_PORT=${DB_PORT:-3306}
 
 echoerr "wait-for-db: waiting for ${DB_HOST_NAME}:${DB_PORT}"
 
