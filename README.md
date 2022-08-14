@@ -19,7 +19,7 @@ docker run -d --net bookstack_nw  \
 -e MYSQL_USER=bookstack \
 -e MYSQL_PASSWORD=secret \
  --name="bookstack_db" \
- mysql:5.7.21
+ mysql:8
 ```
 
 3. Run BookStack Container
@@ -32,8 +32,8 @@ docker run -d --net bookstack_nw \
 -e DB_PASSWORD=secret \
 -e APP_URL=http://example.com \
 -p 8080:8080 \
---name="bookstack_22.04.02" \
- solidnerd/bookstack:22.04.02
+--name="bookstack_22.07.03" \
+ ghcr.io/codemicro/22.07.03
 ```
 
 The APP_URL parameter should be the base URL for your BookStack instance without a trailing slash. For example:
@@ -49,7 +49,7 @@ To access your `.env` file and important bookstack folders on your host system c
 ```
 In case of a windows host machine the .env file has to be already created in the host directory otherwise a folder named .env will be created.
 
-After these steps you can visit [http://localhost:8080](http://localhost:8080) . You can login with username 'admin@admin.com' and password 'password'.
+After these steps you can visit [http://localhost:8080](http://localhost:8080). You can login with username 'admin@admin.com' and password 'password'.
 
 ## Inspiration
 
