@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-echo "Generating Key..."
-php artisan key:generate --show
-
 echo "Starting Migration..."
 php artisan migrate --force
 
