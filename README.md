@@ -1,9 +1,6 @@
-## Docker Image For [BookStack](https://github.com/ssddanbrown/BookStack)
+# Docker Image For [BookStack](https://github.com/ssddanbrown/BookStack)
 
-### Issues
-
-
-### How to use the Image without Docker compose
+## How to use the Image without Docker compose
 
 *(For Docker 1.9+)*
 
@@ -42,7 +39,7 @@ docker run -d --net bookstack_nw \
 The APP_URL parameter should be the base URL for your BookStack instance without a trailing slash. For example:
 APP_URL=http://example.com
 
-#### Volumes
+### Volumes
 To access your `.env` file and important bookstack folders on your host system change `<HOST>` in the following line to your host directory and add it then to your run command:
 
 ```bash
@@ -54,6 +51,6 @@ In case of a windows host machine the .env file has to be already created in the
 
 After these steps you can visit [http://localhost:8080](http://localhost:8080) . You can login with username 'admin@admin.com' and password 'password'.
 
-### Inspiration
+## Inspiration
 
 This is a fork of [solidnerd/docker-bookstack](https://github.com/solidnerd/docker-bookstack), which is in turn a fork of [Kilhog/docker-bookstack](https://github.com/Kilhog/docker-bookstack). Kilhog did the intial work, solidnerd wanted to go in a different direction and I wanted an up-to-date version of the image.
