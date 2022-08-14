@@ -1,5 +1,5 @@
 FROM alpine:3 as bookstack
-ENV BOOKSTACK_VERSION=22.04.2
+ENV BOOKSTACK_VERSION=22.07.3
 RUN apk add --no-cache curl tar
 RUN set -x; \
     curl -SL -o bookstack.tar.gz https://github.com/BookStackApp/BookStack/archive/v${BOOKSTACK_VERSION}.tar.gz  \
@@ -64,7 +64,10 @@ RUN set -x; \
     && chown -R www-data:www-data /var/www/bookstack
 
 COPY php.ini /usr/local/etc/php/php.ini
-COPY docker-entrypoint.sh /bin/docker-entrypoint.sh
+COPY --chown=33:33 docker-entrypoint.sh /bin/docker-entrypoint.sh
+
+RUN chmod +x /bin/docker-entrypoint.sh
+RUN chown -R 33:33 /etc/apache2
 
 WORKDIR /var/www/bookstack
 
