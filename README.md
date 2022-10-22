@@ -55,6 +55,20 @@ After these steps you can visit [http://localhost:8080](http://localhost:8080). 
 
 * Includes a copy of [Mathjax 3](https://www.mathjax.org) at `/libs/mathjax/tex-chtml.js`
 
+  This can be used with the following snippet that can be placed in the custom HTML head content section in your Bookstack settings in order to enable LaTeX support.
+  ```html
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']]
+    }
+  };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+  ```
+
 ## Inspiration
 
 This is a fork of [solidnerd/docker-bookstack](https://github.com/solidnerd/docker-bookstack), which is in turn a fork of [Kilhog/docker-bookstack](https://github.com/Kilhog/docker-bookstack). Kilhog did the intial work, solidnerd wanted to go in a different direction and I wanted an up-to-date version of the image.
