@@ -51,6 +51,10 @@ In case of a windows host machine the .env file has to be already created in the
 
 After these steps you can visit [http://localhost:8080](http://localhost:8080). You can login with username 'admin@admin.com' and password 'password'.
 
+## Extras
+
+* Includes a copy of [Mathjax 3](https://www.mathjax.org) at `/libs/mathjax/tex-chtml.js`
+
 ## Inspiration
 
 This is a fork of [solidnerd/docker-bookstack](https://github.com/solidnerd/docker-bookstack), which is in turn a fork of [Kilhog/docker-bookstack](https://github.com/Kilhog/docker-bookstack). Kilhog did the intial work, solidnerd wanted to go in a different direction and I wanted an up-to-date version of the image.

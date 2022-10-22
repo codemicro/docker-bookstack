@@ -69,6 +69,9 @@ COPY --chown=33:33 docker-entrypoint.sh /bin/docker-entrypoint.sh
 RUN chmod +x /bin/docker-entrypoint.sh
 RUN chown -R 33:33 /etc/apache2
 
+# Include Mathjax 3 in Docker image
+ADD https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js /var/www/bookstack/public/libs/mathjax/tex-chtml.js
+
 WORKDIR /var/www/bookstack
 
 # www-data
