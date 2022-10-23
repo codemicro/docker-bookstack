@@ -53,7 +53,7 @@ After these steps you can visit [http://localhost:8080](http://localhost:8080). 
 
 ## Extras
 
-* Includes a copy of [Mathjax 3](https://www.mathjax.org) at `/libs/mathjax/tex-chtml.js`
+* Includes a copy of [Mathjax 3](https://www.mathjax.org) at `/libs/mathjax/tex-chtml-full.js`
 
   This can be used with the following snippet that can be placed in the custom HTML head content section in your Bookstack settings in order to enable LaTeX support.
   ```html
@@ -65,7 +65,7 @@ After these steps you can visit [http://localhost:8080](http://localhost:8080). 
   };
   </script>
   <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    src="/libs/mathjax/tex-chtml-full.js">
   </script>
   ```
 
