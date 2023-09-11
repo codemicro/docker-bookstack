@@ -32,8 +32,8 @@ docker run -d --net bookstack_nw \
 -e DB_PASSWORD=secret \
 -e APP_URL=http://example.com \
 -p 8080:8080 \
---name="bookstack_23.06.2" \
- ghcr.io/codemicro/bookstack:23.06.2
+--name="bookstack_23.08.2" \
+ ghcr.io/codemicro/bookstack:23.08.2
 ```
 
 The APP_URL parameter should be the base URL for your BookStack instance without a trailing slash. For example:
